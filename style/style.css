@@ -32,6 +32,10 @@
     top:0;
 }
 
+#extra_space{
+    height:200px;
+}
+
 
 a, a:hover, a:focus, a:active {
     text-decoration: none;
@@ -117,16 +121,15 @@ header {
 #body{
     width:100%;
     display:flex;
+    align-items: stretch;
 }
 
     #body #left_side{
         background-color:#515151;
-        height:2500px;
         width:37%;
     }
 
     #body #right_side{
-        height:600px;
         width:63%;
     }
 
