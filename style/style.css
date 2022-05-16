@@ -43,11 +43,13 @@ a, a:hover, a:focus, a:active {
     color:var(--title-color);
     font-size: 18px;
     letter-spacing: 3px;
+    text-align: left;
 }
 
 #title2{
     font-weight: bold;
     letter-spacing: 3px;
+    text-align: left;
 }
 
 
