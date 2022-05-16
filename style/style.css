@@ -15,14 +15,23 @@
     padding:0;
     font-family:'Calibri';
     font-size:16px;
-    letter-spacing: 2px;
     --title-color: #ee6318;
+
+    color:#515151;
+
+    text-align: justify ;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
     transition:opacity 1s;
 }
+
+#sticky{
+    position:sticky;
+    top:0;
+}
+
 
 a, a:hover, a:focus, a:active {
     text-decoration: none;
@@ -35,6 +44,12 @@ a, a:hover, a:focus, a:active {
     font-size: 18px;
     letter-spacing: 3px;
 }
+
+#title2{
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
 
 /*Header part*/
 header {
@@ -99,12 +114,18 @@ header {
 /*Other content*/
 #body{
     width:100%;
+    display:flex;
 }
 
     #body #left_side{
         background-color:#515151;
-        height:600px;
+        height:2000px;
         width:37%;
+    }
+
+    #body #right_side{
+        height:600px;
+        width:63%;
     }
 
     
@@ -112,13 +133,24 @@ header {
         padding-left:5%;
         padding-top:70px;
         padding-bottom:20px;
-        text-align: left;
+    }
+    
+    #body #right_side #title{
+        padding-left:5%;
+        padding-top:70px;
+    }
+    
+    #body #title2{
+        padding-left:5%;
+        padding-top:20px;
+        padding-bottom:20px;
     }
     
     #body #detail{
-        color:#fff;
-        text-align: left;
         padding:7px 10%;
         word-wrap: break-word;
-        letter-spacing: 0;
+    }
+    
+    #body #left_side #detail{
+        color:#fff;
     }
