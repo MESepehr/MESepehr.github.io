@@ -1,6 +1,6 @@
-# CV HTML Themplate
-## Dont you Whana host your CV online?
-1- Copy this template to your local machin,
+# CV HTML Template
+## Don't you Wanna host your CV online?
+1- Copy this template to your local machine,
 
 2- Change it to your liking,
 
@@ -8,8 +8,8 @@
 ( mine is : mesepehr.github.io )
 
 
-Thats it, now you have your own CV online for free on [your_user_name] .github.io
+That's it, now you have your own CV online for free on [your_user_name] .github.io
 ( mine is here: https://mesepehr.github.io )
 
 ## Custom domain
-To point your domain, just edit the CNAME file and write down your domain to it, then poind your DNS on your domain to 185.199.108.153
+To point your domain, just edit the CNAME file and write down your domain to it, then point your DNS on your domain to 185.199.108.153
