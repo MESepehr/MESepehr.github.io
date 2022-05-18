@@ -1,5 +1,5 @@
 # CV HTML Template
-## Don't you Wanna host your CV online?
+## Don't you wanna host your CV online?
 1- Copy this template to your local machine,
 
 2- Change it to your liking,
