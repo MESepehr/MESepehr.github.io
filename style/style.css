@@ -16,6 +16,7 @@
     font-family:'Calibri';
     font-size:16px;
     --title-color: #ec032c;
+    --title-color-fade: #f18599;
 
     color:#515151;
 
@@ -159,4 +160,32 @@ header {
     
     #body #left_side #detail{
         color:#fff;
+    }
+
+/*Status bar*/
+#status_box{
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+}
+#status_bar{
+    width:15%;
+    padding:5%;
+}
+
+    #status_bar h4
+    {
+        margin-bottom:5px;
+    }
+
+    #status_bar div{
+        width:100%;
+        height:16px;
+        background-color: var(--title-color-fade);
+    }
+
+    #status_bar div div{
+        width:40%;
+        height:100%;
+        background-color: var(--title-color);
     }
