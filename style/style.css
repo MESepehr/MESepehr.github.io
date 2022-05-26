@@ -125,7 +125,8 @@ header {
     width:100%;
     display:flex;
     align-items: stretch;
-    overflow-x:hidden;
+    /* It made sticky slide menue deactivate */
+    /* overflow-x:hidden; */
 }
 
     #body #left_side{
@@ -194,7 +195,7 @@ header {
 
     #status_bar div{
         width:100%;
-        height:16px;
+        height:20px;
         border-radius: 5px;
         background-color: var(--title-color-fade);
     }
@@ -204,4 +205,18 @@ header {
         height:100%;
         border-radius: 20px;
         background-color: var(--title-color);
+    }
+
+    #image_3{
+        width:30%;
+        filter: grayscale(100%);
+        transition:all 0.4s;
+    }
+    
+    #image_3 img{
+        width:100%;
+    }
+
+    #image_3:hover{
+        filter: grayscale(0%);
     }
