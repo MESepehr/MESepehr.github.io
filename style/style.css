@@ -89,6 +89,7 @@ header {
         position: sticky;
         margin-top:-60px;
         overflow:hidden;
+        z-index:100;
     }
 
 /*Information*/
