@@ -15,7 +15,7 @@
     padding:0;
     font-family:'Calibri';
     font-size:16px;
-    --title-color: #ec032c;
+    --title-color: #d93b61;
     --title-color-fade: #f18599;
 
     color:#515151;
@@ -124,6 +124,7 @@ header {
     width:100%;
     display:flex;
     align-items: stretch;
+    overflow-x:hidden;
 }
 
     #body #left_side{
@@ -150,7 +151,7 @@ header {
     #body #title2{
         padding-left:5%;
         padding-top:20px;
-        padding-bottom:20px;
+        padding-bottom:10px;
     }
     
     #body #detail{
@@ -162,15 +163,25 @@ header {
         color:#fff;
     }
 
+
+
+
+    #web_page{
+        color:#aaa;
+        font-style: italic;
+    }
+
 /*Status bar*/
 #status_box{
-    width:100%;
+    width:95%;
+    padding-left:5%;
     display:flex;
     flex-wrap: wrap;
+    align-items: flex-end;
 }
 #status_bar{
     width:15%;
-    padding:5%;
+    padding: 10px 5% 25px 5%;
 }
 
     #status_bar h4
@@ -181,11 +192,13 @@ header {
     #status_bar div{
         width:100%;
         height:16px;
+        border-radius: 5px;
         background-color: var(--title-color-fade);
     }
 
     #status_bar div div{
         width:40%;
         height:100%;
+        border-radius: 20px;
         background-color: var(--title-color);
     }
