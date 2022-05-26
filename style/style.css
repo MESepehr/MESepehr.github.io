@@ -174,15 +174,17 @@ header {
 
 /*Status bar*/
 #status_box{
-    width:95%;
-    padding-left:5%;
+    width:85%;
+    padding-left:10%;
+    padding-right:5%;
     display:flex;
     flex-wrap: wrap;
     align-items: flex-end;
+    justify-content: space-between;
 }
 #status_bar{
-    width:15%;
-    padding: 10px 5% 25px 5%;
+    width:20%;
+    padding: 10px 5% 25px 0%;
 }
 
     #status_bar h4
