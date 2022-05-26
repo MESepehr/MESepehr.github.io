@@ -15,7 +15,7 @@
     padding:0;
     font-family:'Calibri';
     font-size:16px;
-    --title-color: #ee6318;
+    --title-color: #ec032c;
 
     color:#515151;
 
@@ -63,7 +63,7 @@ header {
 }
 
     header #image{
-        width:40%;
+        width:37%;
         display:flex;
     }
 
