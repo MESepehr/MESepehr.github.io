@@ -20,14 +20,14 @@
 
     color:#515151;
 
-    text-align: justify ;
-
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
     transition:opacity 1s;
     /* word-break: break-all; */
     word-break: break-word;
+}
+p{
     text-align: justify;
 }
 @media only screen and (max-width: 800px) {
