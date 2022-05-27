@@ -283,16 +283,23 @@ header {
         background-color: var(--title-color);
     }
 
-    #image_3{
+    #image_3, #image_3_2, #image_2{
         width:30%;
         filter: grayscale(100%);
         transition:all 0.4s;
     }
+
+    #image_2{
+        width:45%;
+    }
+    #image_3_2{
+        width:60%;
+    }
     
-    #image_3 img{
+    #image_2 img, #image_3 img, #image_3_2 img{
         width:100%;
     }
 
-    #image_3:hover{
+    #image_2:hover, #image_3:hover, #image_3_2:hover{
         filter: grayscale(0%);
     }
