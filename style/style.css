@@ -35,6 +35,11 @@
         font-size:12px;
     }
 }
+@media only screen and (min-width: 1200px) {
+    *{
+        font-size:25px;
+    }
+}
 
 #sticky{
     position:sticky;
@@ -57,6 +62,11 @@ a, a:hover, a:focus, a:active {
     font-size: 18px;
     letter-spacing: 3px;
     text-align: left;
+}
+@media only screen and (min-width: 1200px) {
+    #title{
+        font-size:28px;
+    }
 }
 
 #title2{
