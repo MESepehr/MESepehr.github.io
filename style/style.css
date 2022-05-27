@@ -94,7 +94,7 @@ header {
     header #image{
         width:30%;
         display:flex;
-        min-width: 200px;
+        min-width: 150px;
     }
 
     header img{
@@ -162,7 +162,7 @@ header {
     #body #left_side{
         background-color:#515151;
         width:30%;
-        min-width: 200px;
+        min-width: 150px;
     }
 
     #body #right_side{
