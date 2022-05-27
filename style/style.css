@@ -9,6 +9,15 @@
     font-style: normal;
 }
 
+@font-face {
+	font-family: 'Yekan';
+	src:	url('../fonts/Yekan.woff') format('woff'); /* Modern Browsers */
+	font-weight: normal;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+	font-display: auto;
+}
+
 
 * {
     margin:0;
@@ -83,7 +92,7 @@ header {
 }
 
     header #image{
-        width:37%;
+        width:30%;
         display:flex;
         min-width: 200px;
     }
@@ -152,12 +161,12 @@ header {
 
     #body #left_side{
         background-color:#515151;
-        width:37%;
+        width:30%;
         min-width: 200px;
     }
 
     #body #right_side{
-        width:63%;
+        width:70%;
     }
 
     
@@ -178,9 +187,25 @@ header {
         padding-bottom:10px;
     }
     
-    #body #detail{
+    #body #detail, #detail_fa{
         padding:7px 10%;
         word-wrap: break-word;
+    }
+
+    #detail_fa{
+        direction:rtl;
+        letter-spacing: 0;
+        font-family: 'Yekan';
+        padding:5% 12%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        #detail_fa{
+            font-size:20px;
+        }
+        #web_page_fa{
+            font-size:20px;
+        }
     }
     
     #body #left_side #detail{
@@ -190,9 +215,32 @@ header {
 
 
 
-    #web_page{
+    #web_page , #web_page_fa{
         color:#aaa;
         font-style: italic;
+    }
+
+    #web_page_fa{
+        font-family: 'Yekan';
+    }
+
+    #bio_part{
+        display:flex;
+        padding:5%;
+    }
+
+    #bio_part p{
+        padding:2% !important;
+        text-align: inherit ;
+    }
+
+    @media only screen and (max-width: 800px) {
+        #bio_part{
+            flex-direction: column;
+        }
+        #bio_part p{
+            text-align: justify;
+        }
     }
 
 /*Status bar*/
