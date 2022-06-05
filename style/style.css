@@ -85,6 +85,14 @@ a, a:hover, a:focus, a:active {
     padding-left:5%;
 }
 
+#my_sign{
+    position:absolute;
+    top:10px;
+    left:10px;
+    width:3%;
+    max-width:30px;
+}
+
 
 /*Header part*/
 header {
