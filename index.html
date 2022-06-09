@@ -35,7 +35,7 @@
     </script>
 
 </head>
-<body style="opacity:0">
+<body>
     <header>
         <div id="image">
             <img src="./img/mesepehr.jpg" alt="ebrahimsepehr.ir">
@@ -596,19 +596,5 @@
         </div>
     </div>
 </body>
-<script>
-    document.addEventListener("DOMContentLoaded", function(event) {
-        document.body.style = "opacity:1";
-    });
-
-    if((new Date().getTimezoneOffset()<-300 || new Date().getTimezoneOffset()>-200))
-    {
-        hideFarsiDetails();
-    }
-
-    function hideFarsiDetails()
-    {
-        var farsiItems = document.getElementById('detail_fa').style.display = 'none';
-    }
-</script>
+<script src="./js/script.js"></script>
 </html>
