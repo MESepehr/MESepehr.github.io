@@ -184,13 +184,18 @@ header {
     /* overflow-x:hidden; */
 }
 
-.experience_text{
+.experience_text, .experience_text_light{
     /* width: 80px; */
     display:inline-block;
     white-space: nowrap;
     padding: 0 !important;
     text-align: left !important;
     /* letter-spacing: 4px !important; */
+}
+
+.experience_text_light{
+    color:#bbb;
+    /* font-size: 12px !important; */
 }
 
     #body #left_side{

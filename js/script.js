@@ -22,10 +22,15 @@ updateBio();
 
 function updateBio()
 {
-    var timePassed = fixStrLn(Math.round(((new Date().getTime() - myFirstDayOfJon.getTime())/millisecondsInYear)*dateLength)/dateLength,dateLength.toString().length+2);
+    var timePassed = fixStrLn(Math.round(((new Date().getTime() - myFirstDayOfJon.getTime())/millisecondsInYear)*dateLength)/dateLength,dateLength.toString().length+2).toString();
+    console.log(timePassed)
+    var timeInPart = timePassed.split('.');
     var elements = document.getElementsByClassName('experience_text');
-    elements[0].innerText = faNum(timePassed);
-    elements[1].innerText = timePassed;
+    var elementsParts = document.getElementsByClassName('experience_text_light');
+    // elements[0].innerText = faNum(timeInPart[0]);
+    elementsParts[0].innerText = faNum(timeInPart[1])+'.';
+    elements[1].innerText = timeInPart[0];
+    elementsParts[1].innerText = '.'+timeInPart[1];
 }
 
 function faNum(str)
