@@ -184,6 +184,15 @@ header {
     /* overflow-x:hidden; */
 }
 
+.experience_text{
+    /* width: 80px; */
+    display:inline-block;
+    white-space: nowrap;
+    padding: 0 !important;
+    text-align: left !important;
+    /* letter-spacing: 4px !important; */
+}
+
     #body #left_side{
         background-color:#515151;
         width:30%;
