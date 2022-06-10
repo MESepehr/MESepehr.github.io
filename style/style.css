@@ -348,7 +348,7 @@ header {
 
     #image_3, #image_3_2, #image_2{
         width:30%;
-        filter: grayscale(100%);
+        filter: grayscale(0%);
         transition:all 0.4s;
     }
 
@@ -364,5 +364,5 @@ header {
     }
 
     #image_2:hover, #image_3:hover, #image_3_2:hover{
-        filter: grayscale(0%);
+        filter: grayscale(100%);
     }
