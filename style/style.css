@@ -120,6 +120,7 @@ header {
         width:30%;
         display:flex;
         min-width: 150px;
+        min-height: 300px;
     }
 
     header img{
@@ -149,20 +150,23 @@ header {
 /*Information*/
 #info{
     display:flex;
-    width:60%;
+    width:70%;
     justify-content: center;
     align-items: center;
     padding-bottom:40px;
+    flex-direction: column;
+    margin-top:20px;
 }
 
     #info #title{
         padding:5px 5%;
     }
 
-    #info #detail{
-        padding-left:20px;
+    #info #detail, #info #detail_fa{
+        padding-left:5%;
         padding-bottom:3px;
         padding-right:5%;
+        max-width:800px;
     }
 
     @media only screen and (min-width: 800px) {

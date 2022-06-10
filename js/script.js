@@ -13,12 +13,19 @@ const dateLength = 1000000000 ;
 
 if(forceFarsi == false && (new Date().getTimezoneOffset()<-300 || new Date().getTimezoneOffset()>-200))
 {
-    hideFarsiDetails();
+    hideItem(document.getElementsByClassName('detail_fa'));
+}
+else
+{
+    hideItem(document.getElementsByClassName('detail_en'));
 }
 
-function hideFarsiDetails()
+function hideItem(items)
 {
-    var farsiItems = document.getElementById('detail_fa').style.display = 'none';
+    for(var i = 0  ; i<items.length ; i++)
+    {
+        items[i].style.display = 'none' ;
+    }
 }
 
 if(!printMode)
@@ -30,7 +37,6 @@ updateBio();
 function updateBio()
 {
     var timePassed = fixStrLn(Math.round(((new Date().getTime() - myFirstDayOfJon.getTime())/millisecondsInYear)*dateLength)/dateLength,dateLength.toString().length+2).toString();
-    console.log(timePassed)
     var timeInPart = timePassed.split('.');
     var elements = document.getElementsByClassName('experience_text');
     var elementsParts = document.getElementsByClassName('experience_text_light');
