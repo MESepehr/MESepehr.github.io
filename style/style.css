@@ -150,22 +150,14 @@ header {
 /*Information*/
 #info{
     display:flex;
-    width:70%;
-    justify-content: center;
-    align-items: center;
-    padding-bottom:40px;
+    width:60%;
+    padding:25px 5% 80px 5%;
     flex-direction: column;
-    margin-top:20px;
 }
 
-    #info #title{
-        padding:5px 5%;
-    }
 
     #info #detail, #info #detail_fa{
-        padding-left:5%;
-        padding-bottom:3px;
-        padding-right:5%;
+        padding:0 !important;
         max-width:800px;
     }
 

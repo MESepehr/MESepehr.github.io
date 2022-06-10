@@ -5,13 +5,14 @@
 
 var printMode = window.location.hash.toLowerCase().indexOf("print") != -1;
 var forceFarsi = window.location.hash.toLowerCase().indexOf("fa") != -1;
+var forceEn = window.location.hash.toLowerCase().indexOf("en") != -1;
 
 const faZeroCharCode = String('۰').charCodeAt(0);
 var myFirstDayOfJon = new Date("Feb 26 2009 08:30:00");
 const millisecondsInYear = 3.1556926 * Math.pow(10,10) ;
 const dateLength = 1000000000 ;
 
-if(forceFarsi == false && (new Date().getTimezoneOffset()<-300 || new Date().getTimezoneOffset()>-200))
+if(forceEn || (forceFarsi == false && (new Date().getTimezoneOffset()<-300 || new Date().getTimezoneOffset()>-200)))
 {
     hideItem(document.getElementsByClassName('detail_fa'));
 }
