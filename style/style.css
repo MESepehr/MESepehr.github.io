@@ -114,6 +114,7 @@ a, a:hover, a:focus, a:active {
 /*Header part*/
 header {
     display:flex;
+    align-items: stretch;
 }
 
     header #image{
@@ -153,6 +154,7 @@ header {
     width:60%;
     padding:25px 5% 80px 5%;
     flex-direction: column;
+    justify-content: space-around
 }
 
 
