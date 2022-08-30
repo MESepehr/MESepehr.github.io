@@ -6,6 +6,7 @@
 var printMode = window.location.hash.toLowerCase().indexOf("print") != -1;
 var forceFarsi = window.location.hash.toLowerCase().indexOf("fa") != -1;
 var forceEn = window.location.hash.toLowerCase().indexOf("en") != -1;
+var showHolderwinFirst = window.location.hash.toLowerCase().indexOf("holder") != -1;
 
 const faZeroCharCode = String('۰').charCodeAt(0);
 var myFirstDayOfJon = new Date("Feb 26 2009 08:30:00");
@@ -19,6 +20,11 @@ if(forceEn || (forceFarsi == false && (new Date().getTimezoneOffset()<-300 || ne
 else
 {
     hideItem(document.getElementsByClassName('detail_en'));
+}
+
+if(showHolderwinFirst)
+{
+    showHolderwin();
 }
 
 function hideItem(items)
@@ -63,4 +69,10 @@ function fixStrLn(str,length)
         str = str+'0';
     }
     return str;
+}
+
+function showHolderwin()
+{
+    var holderWinPart = document.getElementsByClassName("part3")[0];
+    holderWinPart.parentNode.insertBefore(holderWinPart,document.getElementsByClassName("part1")[0]);
 }

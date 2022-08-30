@@ -24,8 +24,8 @@
     padding:0;
     font-family:'Calibri';
     font-size:16px;
-    --title-color: #d93b61;
-    --title-color-fade: #f18599;
+    --title-color: #4d79ba;
+    --title-color-fade: #b3c6da;
 
     color:#515151;
 
@@ -46,7 +46,7 @@ p{
 }
 @media only screen and (min-width: 1200px) {
     *{
-        font-size:18px;
+        font-size:24px;
     }
 }
 
