@@ -232,6 +232,7 @@ header {
     #body #right_side #title{
         padding:0 5%;
         padding-top:70px;
+        width:100%;
     }
     
     #body #title2{
@@ -315,6 +316,7 @@ header {
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-between;
+    margin-bottom:5px;
 }
 #status_bar{
     width:20%;
@@ -351,7 +353,6 @@ header {
 
     #status_bar h4
     {
-        margin-bottom:5px;
         font-size:11px;
         text-align: center;
         text-wrap: nowrap;
