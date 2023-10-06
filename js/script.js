@@ -3,6 +3,13 @@
 //     document.body.style = "opacity:1";
 // });
 
+/**
+ * To force to print En language for output, add en anywhere after hash # sign in url
+ * ...com#en
+ * To activate print mode, add print anywhere after # tag
+ * Add fa-en class to every tag you need to only change their rtl direction when it was showing in farsi mode
+ */
+
 var printMode = window.location.hash.toLowerCase().indexOf("print") != -1;
 var forceFarsi = window.location.hash.toLowerCase().indexOf("fa") != -1;
 var forceEn = window.location.hash.toLowerCase().indexOf("en") != -1;
@@ -16,15 +23,35 @@ const dateLength = 1000000000 ;
 if(forceEn || (forceFarsi == false && (new Date().getTimezoneOffset()<-300 || new Date().getTimezoneOffset()>-200)))
 {
     hideItem(document.getElementsByClassName('detail_fa'));
+    changeDirectionLeft(document.getElementsByClassName('en-fa'));
 }
 else
 {
     hideItem(document.getElementsByClassName('detail_en'));
+    changeDirectionRight(document.getElementsByClassName('en-fa'));
 }
 
 if(showHolderwinFirst)
 {
     showHolderwin();
+}
+
+function changeDirectionRight(items)
+{
+    for(var i = 0  ; i<items.length ; i++)
+    {
+        items[i].style.textAlign = 'right' ;
+        items[i].style.direction = 'rtl' ;
+    }
+}
+
+function changeDirectionLeft(items)
+{
+    for(var i = 0  ; i<items.length ; i++)
+    {
+        items[i].style.textAlign = 'left' ;
+        items[i].style.direction = 'ltr' ;
+    }
 }
 
 function hideItem(items)

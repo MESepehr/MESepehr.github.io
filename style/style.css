@@ -46,7 +46,7 @@ p{
 }
 @media only screen and (min-width: 1200px) {
     *{
-        font-size:24px;
+        font-size:16px;
     }
 }
 
@@ -83,7 +83,7 @@ a, a:hover, a:focus, a:active {
     font-weight: bold;
     letter-spacing: 3px;
     text-align: left;
-    padding-left:5%;
+    padding:0 5%;
 }
 
 #my_sign{
@@ -99,14 +99,14 @@ a, a:hover, a:focus, a:active {
     /* filter: invert(78%) sepia(10%) saturate(21%) hue-rotate(1deg) brightness(86%) contrast(87%); */
     width: 20px;
     /* padding-left:20px; */
-    padding-left:10%;
+    padding:0 10%;
     margin-top:7px;
 }
 
 @media only screen and (max-width: 800px) {
     #social_icon{
         width: 12px;
-        padding-left:12px;
+        padding:0 12px;
     }
 }
 
@@ -160,7 +160,7 @@ header {
 
     #info #detail, #info #detail_fa{
         padding:0 !important;
-        max-width:800px;
+        /* max-width:800px; */
     }
 
     @media only screen and (min-width: 800px) {
@@ -208,18 +208,18 @@ header {
 
     
     #body #title{
-        padding-left:5%;
+        padding:0 5%;
         padding-top:70px;
         padding-bottom:20px;
     }
     
     #body #right_side #title{
-        padding-left:5%;
+        padding:0 5%;
         padding-top:70px;
     }
     
     #body #title2{
-        padding-left:5%;
+        padding:0 5%;
         padding-top:20px;
         padding-bottom:10px;
     }
@@ -234,6 +234,13 @@ header {
         letter-spacing: 0;
         font-family: 'Yekan';
         padding:5% 12%;
+    }
+
+    .fa{
+        direction:rtl !important;
+        letter-spacing: 0 !important;
+        font-family: 'Yekan' !important;
+        text-align:right !important;
     }
 
     @media only screen and (min-width: 1200px) {
@@ -272,7 +279,6 @@ header {
 
     #bio_part p{
         padding:2% !important;
-        text-align: inherit ;
     }
 
     @media only screen and (max-width: 800px) {
