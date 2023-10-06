@@ -182,6 +182,22 @@ header {
     /* overflow-x:hidden; */
 }
 
+.parts{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.cv_part{
+    margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 800px) {
+    .cv_part {
+        width:50%;
+        box-sizing: border-box;
+    }
+}
+
 .experience_text, .experience_text_light{
     /* width: 80px; */
     display:inline-block;
@@ -240,7 +256,7 @@ header {
         direction:rtl !important;
         letter-spacing: 0 !important;
         font-family: 'Yekan' !important;
-        text-align:right !important;
+        text-align:justify !important;
     }
 
     @media only screen and (min-width: 1200px) {
@@ -302,7 +318,7 @@ header {
 }
 #status_bar{
     width:20%;
-    padding: 10px 5% 25px 0%;
+    padding: 5px 5% 5px 0%;
 }
 
 @media only screen and (max-width: 800px) {
@@ -336,6 +352,9 @@ header {
     #status_bar h4
     {
         margin-bottom:5px;
+        font-size:11px;
+        text-align: center;
+        text-wrap: nowrap;
     }
 
     #status_bar div{
