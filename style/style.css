@@ -240,6 +240,7 @@ header {
         padding-top:20px;
         padding-bottom:10px;
         width:100%;
+        box-sizing:border-box;
     }
     
     #body #detail, #detail_fa{
