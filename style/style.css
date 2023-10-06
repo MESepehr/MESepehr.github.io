@@ -124,7 +124,7 @@ header {
     header #image{
         width:30%;
         display:flex;
-        min-width: 150px;
+        min-width: 170px;
         min-height: 300px;
     }
 
@@ -219,7 +219,7 @@ header {
     #body #left_side{
         background-color:#515151;
         width:30%;
-        min-width: 150px;
+        min-width: 170px;
     }
 
     #body #right_side{
