@@ -18,6 +18,10 @@
 	font-display: auto;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 * {
     margin:0;
