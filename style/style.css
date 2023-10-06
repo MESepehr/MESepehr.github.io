@@ -245,7 +245,7 @@ header {
     #body #detail, #detail_fa{
         padding:7px 10%;
         word-wrap: break-word;
-        width:80%;
+        /* width:80%; */
     }
 
     #detail_fa{
