@@ -239,11 +239,13 @@ header {
         padding:0 5%;
         padding-top:20px;
         padding-bottom:10px;
+        width:100%;
     }
     
     #body #detail, #detail_fa{
         padding:7px 10%;
         word-wrap: break-word;
+        width:80%;
     }
 
     #detail_fa{
