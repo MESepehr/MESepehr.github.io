@@ -18,7 +18,7 @@ var showHolderwinFirst = window.location.hash.toLowerCase().indexOf("holder") !=
 const faZeroCharCode = String('۰').charCodeAt(0);
 var myFirstDayOfJon = new Date("Feb 26 2009 08:30:00");
 const millisecondsInYear = 3.1556926 * Math.pow(10,10) ;
-const dateLength = 1000000000 ;
+const dateLength = 100000000 ;
 
 if(forceEn || (forceFarsi == false && (new Date().getTimezoneOffset()<-300 || new Date().getTimezoneOffset()>-200)))
 {

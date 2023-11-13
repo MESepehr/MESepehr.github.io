@@ -23,15 +23,23 @@ html {
 }
 
 
+
 * {
     margin:0;
     padding:0;
     font-family:'Calibri';
     font-size:16px;
-    --title-color: #4d79ba;
-    --title-color-fade: #b3c6da;
+    --title-color: #7c2525;
+    --title-color-fade: #a47a7a;
+    --background2-color: #000000;
+    --header-background-color:#19111155;
+    --main-background-color: #181313;
+    --header-color:#f0f0f0;
+    --left-menu-color:#f0f0f0;
+    --links-color:#aaa;
+    --fade-color:#4c4c4c;
 
-    color:#515151;
+    color:#b3b3b3;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -39,6 +47,9 @@ html {
     transition:opacity 1s;
     /* word-break: break-all; */
     word-break: break-word;
+}
+body{
+    background-color: var(--main-background-color)
 }
 p{
     text-align: justify;
@@ -99,7 +110,7 @@ a, a:hover, a:focus, a:active {
 }
 
 #social_icon{
-    filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(186deg) brightness(114%) contrast(101%);
+    filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(186deg) brightness(114%) contrast(50%);
     /* filter: invert(78%) sepia(10%) saturate(21%) hue-rotate(1deg) brightness(86%) contrast(87%); */
     width: 20px;
     /* padding-left:20px; */
@@ -138,16 +149,16 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #4447;
-        height: 60px;
-        color: #fff;
+        background-color: var(--header-background-color);
+        height: 40px;
+        color: var(--header-color);
         font-weight: bold;
         width: 100%;
         font-size: 1.4em;
         letter-spacing: 4px;
         text-align: center;
         position: sticky;
-        margin-top:-60px;
+        margin-top:-40px;
         overflow:hidden;
         z-index:100;
     }
@@ -156,7 +167,7 @@ header {
 #info{
     display:flex;
     width:60%;
-    padding:25px 5% 80px 5%;
+    padding:50px 5% 80px 5%;
     flex-direction: column;
     justify-content: space-around
 }
@@ -212,12 +223,12 @@ header {
 }
 
 .experience_text_light{
-    color:#bbb;
+    color:var(--fade-color);
     /* font-size: 12px !important; */
 }
 
     #body #left_side{
-        background-color:#515151;
+        background-color:var(--background2-color);
         width:30%;
         min-width: 170px;
     }
@@ -278,19 +289,19 @@ header {
     }
     
     #body #left_side #detail{
-        color:#fff;
+        color:var(--left-menu-color);
     }
 
 
 
 
     #web_page , #web_page_fa, #social_web_page{
-        color:#aaa;
+        color:var(--links-color);
         font-style: italic;
     }
     #social_web_page
     {
-        color:#fff;
+        color:var(--left-menu-color);
     }
 
     #web_page_fa{
