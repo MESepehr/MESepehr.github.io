@@ -261,6 +261,11 @@ header {
         padding:0 5%;
         padding-top:70px;
         width:100%;
+        position: sticky;
+        top: -30px;
+        background-color: var(--main-background-color);
+        z-index: 2;
+        line-height: 40px;
     }
     
     #body #title2{
