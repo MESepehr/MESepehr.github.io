@@ -28,7 +28,6 @@ html {
     margin:0;
     padding:0;
     font-family:'Calibri';
-    font-size:16px;
     --title-color: #7c2525;
     --title-color-fade: #a47a7a;
     --background2-color: #000000;
@@ -38,6 +37,10 @@ html {
     --left-menu-color:#f0f0f0;
     --links-color:#aaa;
     --fade-color:#4c4c4c;
+    --font-size: 18px;
+    --font-size-small: 14px;
+
+    font-size: var(--font-size);
 
     color:#b3b3b3;
 
@@ -48,6 +51,14 @@ html {
     /* word-break: break-all; */
     word-break: break-word;
 }
+
+.link {
+    font-style: italic;
+}
+.link:hover {
+    color: var(--title-color-fade);
+}
+
 body{
     background-color: var(--main-background-color)
 }
@@ -56,12 +67,18 @@ p{
 }
 @media only screen and (max-width: 800px) {
     *{
-        font-size:12px;
+        font-size:var(--font-size-small);
+    }
+    #extra_space{
+        height:50px;
     }
 }
 @media only screen and (min-width: 1200px) {
     *{
-        font-size:16px;
+        font-size:var(--font-size);
+    }
+    #extra_space{
+        height:200px;
     }
 }
 
@@ -70,10 +87,6 @@ p{
     top:0;
 }
 
-
-#extra_space{
-    height:200px;
-}
 
 
 a, a:hover, a:focus, a:active {
@@ -154,7 +167,7 @@ header {
         color: var(--header-color);
         font-weight: bold;
         width: 100%;
-        font-size: 1.4em;
+        font-size: 1.2em;
         letter-spacing: 4px;
         text-align: center;
         position: sticky;
@@ -281,7 +294,7 @@ header {
 
     @media only screen and (min-width: 1200px) {
         #detail_fa{
-            font-size:16px;
+            font-size:var(--font-size);
         }
         #web_page_fa{
             font-size:20px;
