@@ -81,6 +81,9 @@ else
     for( i = 0 ; i < allHeaders.length ; i++)
     {
         allHeaders[i].style.color = 'var(--header-color-print)';
+        allHeaders[i].style.fontSize = 'var(--header-size-print)';
+        allHeaders[i].style.height = 'var(--header-height-print)';
+        allHeaders[i].style.backgroundColor = 'var(--header-background-color-print)';
     }
     var allTexts = document.querySelectorAll('p , div , a');
     for( i = 0 ; i < allTexts.length ; i++)

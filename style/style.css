@@ -33,6 +33,9 @@ html {
     --background2-color: #000000;
     --background2-color-print: #eee;
     --header-background-color:#19111155;
+    --header-background-color-print:#111;
+    --header-height: 40px;
+    --header-height-print: 60px;
     --main-background-color: #181313;
     --main-background-color-print: #FFF;
     --header-color:#f0f0f0;
@@ -47,6 +50,8 @@ html {
     --color-print:#333;
     --csv-filter:invert(100%) sepia(0%) saturate(7498%) hue-rotate(186deg) brightness(114%) contrast(50%);
     --csv-filter-print: invert(25%) sepia(0%) saturate(0%) hue-rotate(165deg) brightness(96%) contrast(90%);
+    --header-size: 1.2em;
+    --header-size-print: 1.6em;
 
     font-size: var(--font-size);
 
@@ -173,11 +178,11 @@ header {
         justify-content: center;
         align-items: center;
         background-color: var(--header-background-color);
-        height: 40px;
+        height: var(--header-height);
         color: var(--header-color);
         font-weight: bold;
         width: 100%;
-        font-size: 1.2em;
+        font-size: var(--header-size);
         letter-spacing: 4px;
         text-align: center;
         position: sticky;
