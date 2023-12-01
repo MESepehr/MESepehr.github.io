@@ -31,18 +31,25 @@ html {
     --title-color: #7c2525;
     --title-color-fade: #a47a7a;
     --background2-color: #000000;
+    --background2-color-print: #eee;
     --header-background-color:#19111155;
     --main-background-color: #181313;
+    --main-background-color-print: #FFF;
     --header-color:#f0f0f0;
+    --header-color-print:#fff;
     --left-menu-color:#f0f0f0;
+    --left-menu-color-print:#444;
     --links-color:#aaa;
     --fade-color:#4c4c4c;
     --font-size: 18px;
     --font-size-small: 14px;
+    --color:#b3b3b3;
+    --color-print:#333;
+    --csv-filter:invert(100%) sepia(0%) saturate(7498%) hue-rotate(186deg) brightness(114%) contrast(50%);
+    --csv-filter-print: invert(25%) sepia(0%) saturate(0%) hue-rotate(165deg) brightness(96%) contrast(90%);
 
     font-size: var(--font-size);
 
-    color:#b3b3b3;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -64,6 +71,9 @@ body{
 }
 p{
     text-align: justify;
+}
+p , div , a {
+    color:var(--color);
 }
 @media only screen and (max-width: 800px) {
     *{
@@ -123,7 +133,7 @@ a, a:hover, a:focus, a:active {
 }
 
 #social_icon{
-    filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(186deg) brightness(114%) contrast(50%);
+    filter: var(--csv-filter);
     /* filter: invert(78%) sepia(10%) saturate(21%) hue-rotate(1deg) brightness(86%) contrast(87%); */
     width: 20px;
     /* padding-left:20px; */

@@ -66,6 +66,44 @@ if(!printMode)
 {
     setInterval(updateBio,100);
 }
+else
+{
+    var allStickyTitles = document.querySelectorAll('#body #right_side #title');
+    for(var i = 0 ; i < allStickyTitles.length ; i++)
+    {
+        allStickyTitles[i].style.top = 0;
+        allStickyTitles[i].style.position = 'relative';
+        allStickyTitles[i].style.backgroundColor = 'var(--main-background-color-print)';
+    }
+    document.getElementsByTagName('body')[0].style.backgroundColor = 'var(--main-background-color-print)';
+    document.getElementById('left_side').style.backgroundColor = 'var(--background2-color-print)';
+    var allHeaders = document.querySelectorAll('h1');
+    for( i = 0 ; i < allHeaders.length ; i++)
+    {
+        allHeaders[i].style.color = 'var(--header-color-print)';
+    }
+    var allTexts = document.querySelectorAll('p , div , a');
+    for( i = 0 ; i < allTexts.length ; i++)
+    {
+        allTexts[i].style.color = 'var(--color-print)';
+    }
+    
+    var leftSiteDetails = document.querySelectorAll('#body #left_side #detail');
+    for(i = 0 ; i < leftSiteDetails.length ; i++)
+    {
+        leftSiteDetails[i].style.color = 'var(--left-menu-color-print)';
+    }
+    var leftSiteSocials = document.querySelectorAll('#social_web_page');
+    for(i = 0 ; i < leftSiteSocials.length ; i++)
+    {
+        leftSiteSocials[i].style.color = 'var(--left-menu-color-print)';
+    }
+    var leftSiteSocialsIcons = document.querySelectorAll('#social_icon');
+    for(i = 0 ; i < leftSiteSocialsIcons.length ; i++)
+    {
+        leftSiteSocialsIcons[i].style.filter = 'var(--csv-filter-print)';
+    }
+}
 updateBio();
 
 function updateBio()
