@@ -11,6 +11,7 @@
  */
 
 var printMode = window.location.hash.toLowerCase().indexOf("print") != -1;
+var agesIntervalId = 0 ;
 var forceFarsi = window.location.hash.toLowerCase().indexOf("fa") != -1;
 var forceEn = window.location.hash.toLowerCase().indexOf("en") != -1;
 var showHolderwinFirst = window.location.hash.toLowerCase().indexOf("holder") != -1;
@@ -61,13 +62,25 @@ function hideItem(items)
         items[i].style.display = 'none' ;
     }
 }
+window.onbeforeprint = function() {
+    makeItPrintFriendly();
+};
+window.onafterprint = function() {
+    location.reload();
+};
 
 if(!printMode)
 {
-    setInterval(updateBio,100);
+    agesIntervalId = setInterval(updateBio,100);
 }
 else
 {
+    makeItPrintFriendly();
+}
+
+function makeItPrintFriendly(){
+    clearInterval(agesIntervalId);
+
     var allStickyTitles = document.querySelectorAll('#body #right_side #title');
     for(var i = 0 ; i < allStickyTitles.length ; i++)
     {
@@ -75,6 +88,7 @@ else
         allStickyTitles[i].style.position = 'relative';
         allStickyTitles[i].style.backgroundColor = 'var(--main-background-color-print)';
     }
+    document.getElementById('sticky').style.position = 'relative';
     document.getElementsByTagName('body')[0].style.backgroundColor = 'var(--main-background-color-print)';
     document.getElementById('left_side').style.backgroundColor = 'var(--background2-color-print)';
     var allHeaders = document.querySelectorAll('h1');
@@ -84,8 +98,10 @@ else
         allHeaders[i].style.fontSize = 'var(--header-size-print)';
         allHeaders[i].style.height = 'var(--header-height-print)';
         allHeaders[i].style.backgroundColor = 'var(--header-background-color-print)';
+        allHeaders[i].style.position = 'relative';
+        allHeaders[i].style.marginTop = 0;
     }
-    var allTexts = document.querySelectorAll('p , div , a');
+    var allTexts = document.querySelectorAll('p , div , a , span');
     for( i = 0 ; i < allTexts.length ; i++)
     {
         allTexts[i].style.color = 'var(--color-print)';
@@ -106,19 +122,20 @@ else
     {
         leftSiteSocialsIcons[i].style.filter = 'var(--csv-filter-print)';
     }
+    updateBio(true);
 }
-updateBio();
 
-function updateBio()
+function updateBio(forceToPrint=false)
 {
+    var isPrintMode = printMode || forceToPrint ;
     var timePassed = fixStrLn(Math.round(((new Date().getTime() - myFirstDayOfJon.getTime())/millisecondsInYear)*dateLength)/dateLength,dateLength.toString().length+2).toString();
     var timeInPart = timePassed.split('.');
     var elements = document.getElementsByClassName('experience_text');
     var elementsParts = document.getElementsByClassName('experience_text_light');
     elements[0].innerText = faNum(timeInPart[0]);
-    elementsParts[0].innerText = printMode?"":(faNum(timeInPart[1])+'.');
+    elementsParts[0].innerText = isPrintMode?"":(faNum(timeInPart[1])+'.');
     elements[1].innerText = timeInPart[0];
-    elementsParts[1].innerText = printMode?"":('.'+timeInPart[1]);
+    elementsParts[1].innerText = isPrintMode?"":('.'+timeInPart[1]);
 }
 
 function faNum(str)

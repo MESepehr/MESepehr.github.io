@@ -22,6 +22,21 @@ html {
     scroll-behavior: smooth;
 }
 
+* {
+    -webkit-print-color-adjust: exact;
+}
+
+@media print {
+    @page {
+        size: 297mm 420mm;
+        margin: 10px;
+        scale: 0.5;
+    }
+    .cv_part , p {
+        display: table;
+        page-break-inside: avoid;
+    }
+}
 
 
 * {
@@ -234,7 +249,7 @@ header {
     margin-bottom: 20px;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 800px) , print {
     .cv_part {
         width:50%;
         box-sizing: border-box;
