@@ -32,7 +32,7 @@ html {
         margin: 10px;
         scale: 0.5;
     }
-    .cv_part , p {
+    .cv_part , p , #status_box {
         display: table;
         page-break-inside: avoid;
     }
@@ -61,12 +61,17 @@ html {
     --fade-color:#4c4c4c;
     --font-size: 18px;
     --font-size-small: 14px;
+    --font-size-menu: 18px;
+    --font-size-menu-small: 12px;
     --color:#b3b3b3;
     --color-print:#333;
     --csv-filter:invert(100%) sepia(0%) saturate(7498%) hue-rotate(186deg) brightness(114%) contrast(50%);
     --csv-filter-print: invert(25%) sepia(0%) saturate(0%) hue-rotate(165deg) brightness(96%) contrast(90%);
     --header-size: 1.2em;
     --header-size-print: 1.6em;
+
+    --left-menu-size: 30%;
+    --left-menu-min-size: 120px;
 
     font-size: var(--font-size);
 
@@ -99,6 +104,9 @@ p , div , a {
     *{
         font-size:var(--font-size-small);
     }
+    #body #left_side * {
+        font-size: var(--font-size-menu-small) !important;
+    }
     #extra_space{
         height:50px;
     }
@@ -106,6 +114,9 @@ p , div , a {
 @media only screen and (min-width: 1200px) {
     *{
         font-size:var(--font-size);
+    }
+    #body #left_side * {
+        font-size: var(--font-size-menu);
     }
     #extra_space{
         height:200px;
@@ -164,7 +175,7 @@ a, a:hover, a:focus, a:active {
 @media only screen and (max-width: 800px) {
     #social_icon{
         width: 12px;
-        padding:0 12px;
+        padding:0 2px;
     }
 }
 
@@ -176,9 +187,9 @@ header {
 }
 
     header #image{
-        width:30%;
+        width:var(--left-menu-size);
         display:flex;
-        min-width: 170px;
+        min-width: var(--left-menu-min-size);
         min-height: 300px;
     }
 
@@ -209,7 +220,7 @@ header {
 /*Information*/
 #info{
     display:flex;
-    width:60%;
+    width:calc( 100% - 10% - var(--left-menu-size));
     padding:50px 5% 80px 5%;
     flex-direction: column;
     justify-content: space-around
@@ -272,12 +283,16 @@ header {
 
     #body #left_side{
         background-color:var(--background2-color);
-        width:30%;
-        min-width: 170px;
+        width:var(--left-menu-size);
+        min-width: var(--left-menu-min-size);
+    }
+
+    #body #left_side * {
+        font-size: var(--font-size-menu);
     }
 
     #body #right_side{
-        width:70%;
+        width:calc( 100% - var(--left-menu-size) );
     }
 
     
