@@ -361,6 +361,7 @@ header {
     #web_page , #web_page_fa, #social_web_page{
         color:var(--links-color);
         font-style: italic;
+        font-size:var(--font-size-small);
     }
     #social_web_page
     {
