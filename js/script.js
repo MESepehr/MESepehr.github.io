@@ -8,6 +8,8 @@
  * ...com#en
  * To activate print mode, add print anywhere after # tag
  * Add fa-en class to every tag you need to only change their rtl direction when it was showing in farsi mode
+ * 
+ * use not_on_print css class over each items that you don't want to show on print mode in your CV and use only_on_print to only print them
  */
 
 var printMode = window.location.hash.toLowerCase().indexOf("print") != -1;
@@ -20,6 +22,14 @@ const faZeroCharCode = String('۰').charCodeAt(0);
 var myFirstDayOfJon = new Date("Feb 26 2009 08:30:00");
 const millisecondsInYear = 3.1556926 * Math.pow(10,10) ;
 const dateLength = 100000000 ;
+
+
+
+var onlyOnPrints = document.getElementsByClassName('only_on_print');
+for(var i = 0 ; i < onlyOnPrints.length ; i++)
+{
+    onlyOnPrints[i].style.display = 'none';
+}
 
 if(forceEn || (forceFarsi == false && (new Date().getTimezoneOffset()<-300 || new Date().getTimezoneOffset()>-200)))
 {
@@ -80,6 +90,25 @@ else
 
 function makeItPrintFriendly(){
     clearInterval(agesIntervalId);
+
+    var allLinks = document.querySelectorAll('#web_page, #web_page_fa, #social_web_page');
+    for(var i = 0 ; i < allLinks.length ; i++)
+    {
+        allLinks[i].style.fontSize = 'var(--font-size)';
+        // allLinks[i].style.textDecoration = 'underline';
+    }
+
+    var onlyOnPrints = document.getElementsByClassName('only_on_print');
+    for(var i = 0 ; i < onlyOnPrints.length ; i++)
+    {
+        onlyOnPrints[i].style.display = 'block';
+    }
+
+    var notOnPrints = document.getElementsByClassName('not_on_print');
+    for(var i = 0 ; i < notOnPrints.length ; i++)
+    {
+        notOnPrints[i].style.display = 'none';
+    }
 
     var allStickyTitles = document.querySelectorAll('#body #right_side #title');
     for(var i = 0 ; i < allStickyTitles.length ; i++)
