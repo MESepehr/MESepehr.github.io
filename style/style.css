@@ -322,7 +322,7 @@ header {
     }
     
     #body #detail, #detail_fa{
-        padding:7px 10%;
+        padding:0px 10%;
         word-wrap: break-word;
         width:100%;
         box-sizing: border-box;
