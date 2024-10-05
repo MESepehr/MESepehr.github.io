@@ -40,6 +40,7 @@ else
 {
     hideItem(document.getElementsByClassName('detail_en'));
     changeDirectionRight(document.getElementsByClassName('en-fa'));
+    changeFlexDirectionToRight(document.getElementsByClassName('parts'));
 }
 
 if(showHolderwinFirst)
@@ -53,6 +54,13 @@ function changeDirectionRight(items)
     {
         items[i].style.textAlign = 'right' ;
         items[i].style.direction = 'rtl' ;
+    }
+}
+function changeFlexDirectionToRight(items)
+{
+    for(var i = 0  ; i<items.length ; i++)
+    {
+        items[i].style.flexDirection = 'row-reverse' ;
     }
 }
 
