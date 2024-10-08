@@ -481,4 +481,5 @@ header {
         padding-top:0;
         width:20%;
         opacity: 0.7;
+        filter: contrast(0);
     }
