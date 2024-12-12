@@ -62,7 +62,7 @@ html {
     --font-size: 18px;
     --font-size-small: 14px;
     --font-size-menu: 18px;
-    --font-size-menu-small: 12px;
+    --font-size-menu-small: 11px;
     --color:#b3b3b3;
     --color-print:#333;
     --csv-filter:invert(100%) sepia(0%) saturate(7498%) hue-rotate(186deg) brightness(114%) contrast(50%);
@@ -139,7 +139,7 @@ a, a:hover, a:focus, a:active {
     font-weight: bold;
     color:var(--title-color);
     font-size: 18px;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     text-align: left;
 }
 @media only screen and (min-width: 1200px) {
