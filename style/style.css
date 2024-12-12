@@ -322,10 +322,16 @@ header {
     }
     
     #body #detail, #detail_fa{
-        padding:0px 10%;
+        padding:10%;
         word-wrap: break-word;
         width:100%;
         box-sizing: border-box;
+    }
+
+    .parts img{
+        margin:0px 10%;
+        width:80%;
+        border-radius: 15px;
     }
 
     #detail_fa{
