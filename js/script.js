@@ -25,28 +25,48 @@ const dateLength = 100000000 ;
 
 
 
-var onlyOnPrints = document.getElementsByClassName('only_on_print');
-for(var i = 0 ; i < onlyOnPrints.length ; i++)
-{
-    onlyOnPrints[i].style.display = 'none';
+
+
+var rendererIntervalId = setInterval(renderPage,1);
+
+document.addEventListener( "DOMContentLoaded", function(){
+    clearInterval(rendererIntervalId);
+    renderPage();
+});
+
+function renderPage(){
+    if(forceEn || (forceFarsi == false && (new Date().getTimezoneOffset()<-300 || new Date().getTimezoneOffset()>-200)))
+    {
+        hideItem(document.getElementsByClassName('detail_fa'));
+        changeDirectionLeft(document.getElementsByClassName('en-fa'));
+    }
+    else
+    {
+        hideItem(document.getElementsByClassName('detail_en'));
+        changeDirectionRight(document.getElementsByClassName('en-fa'));
+        changeFlexDirectionToRight(document.getElementsByClassName('parts'));
+    }
+    if(showHolderwinFirst)
+    {
+        showHolderwin();
+    }
+    if(!printMode)
+    {
+        agesIntervalId = setInterval(updateBio,100);
+    }
+    else
+    {
+        makeItPrintFriendly();
+    }
+    var onlyOnPrints = document.getElementsByClassName('only_on_print');
+    for(var i = 0 ; i < onlyOnPrints.length ; i++)
+    {
+        onlyOnPrints[i].style.display = 'none';
+    }
 }
 
-if(forceEn || (forceFarsi == false && (new Date().getTimezoneOffset()<-300 || new Date().getTimezoneOffset()>-200)))
-{
-    hideItem(document.getElementsByClassName('detail_fa'));
-    changeDirectionLeft(document.getElementsByClassName('en-fa'));
-}
-else
-{
-    hideItem(document.getElementsByClassName('detail_en'));
-    changeDirectionRight(document.getElementsByClassName('en-fa'));
-    changeFlexDirectionToRight(document.getElementsByClassName('parts'));
-}
 
-if(showHolderwinFirst)
-{
-    showHolderwin();
-}
+
 
 function changeDirectionRight(items)
 {
@@ -87,14 +107,7 @@ window.onafterprint = function() {
     location.reload();
 };
 
-if(!printMode)
-{
-    agesIntervalId = setInterval(updateBio,100);
-}
-else
-{
-    makeItPrintFriendly();
-}
+
 
 function makeItPrintFriendly(){
     clearInterval(agesIntervalId);
