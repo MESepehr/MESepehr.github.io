@@ -204,7 +204,7 @@ header {
         justify-content: center;
         align-items: center;
         background-color: var(--header-background-color);
-        height: var(--header-height);
+        /* height: var(--header-height); */
         color: var(--header-color);
         font-weight: bold;
         width: 100%;
@@ -258,6 +258,7 @@ header {
 
 .cv_part{
     margin-bottom: 20px;
+    width:100%;
 }
 
 @media only screen and (min-width: 800px) , print {
