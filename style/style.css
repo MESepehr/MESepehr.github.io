@@ -72,6 +72,7 @@ html {
 
     --left-menu-size: 30%;
     --left-menu-min-size: 120px;
+    --left-menu-max-size: 300px;
 
     font-size: var(--font-size);
 
@@ -190,6 +191,7 @@ header {
         width:var(--left-menu-size);
         display:flex;
         min-width: var(--left-menu-min-size);
+        max-width: var(--left-menu-max-size);
         min-height: 300px;
     }
 
@@ -286,6 +288,7 @@ header {
         background-color:var(--background2-color);
         width:var(--left-menu-size);
         min-width: var(--left-menu-min-size);
+        max-width: var(--left-menu-max-size);
     }
 
     #body #left_side * {
@@ -323,7 +326,7 @@ header {
     }
     
     #body #detail, #detail_fa{
-        padding:10%;
+        padding:3% 10%;
         word-wrap: break-word;
         width:100%;
         box-sizing: border-box;
