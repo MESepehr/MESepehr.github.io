@@ -32,7 +32,13 @@ html {
         margin: 10px;
         scale: 0.5;
     }
-    .cv_part , p , #status_box {
+    p , #status_box {
+        display: table;
+        page-break-inside: avoid;
+    }
+    .cv_part {
+        width:100%;
+        box-sizing: border-box;
         display: table;
         page-break-inside: avoid;
     }
@@ -59,10 +65,10 @@ html {
     --left-menu-color-print:#444;
     --links-color:#aaa;
     --fade-color:#4c4c4c;
-    --font-size: 18px;
-    --font-size-small: 14px;
-    --font-size-menu: 18px;
-    --font-size-menu-small: 11px;
+    --font-size: 16px;
+    --font-size-small: 12px;
+    --font-size-menu: 16px;
+    --font-size-menu-small: 10px;
     --color:#b3b3b3;
     --color-print:#333;
     --csv-filter:invert(100%) sepia(0%) saturate(7498%) hue-rotate(186deg) brightness(114%) contrast(50%);
@@ -263,7 +269,7 @@ header {
     width:100%;
 }
 
-@media only screen and (min-width: 800px) , print {
+@media only screen and (min-width: 800px) {
     .cv_part {
         width:50%;
         box-sizing: border-box;
@@ -302,13 +308,13 @@ header {
     
     #body #title{
         padding:0 5%;
-        padding-top:70px;
+        padding-top:40px;
         padding-bottom:20px;
     }
     
     #body #right_side #title{
         padding:0 5%;
-        padding-top:70px;
+        padding-top:40px;
         width:100%;
         position: sticky;
         top: -30px;
@@ -343,6 +349,10 @@ header {
         letter-spacing: 0;
         font-family: 'Yekan';
         padding:5% 12%;
+    }
+
+    .detail_fa{
+        font-family: 'Yekan';
     }
 
     .fa{
