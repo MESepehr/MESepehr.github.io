@@ -354,7 +354,7 @@ header {
     }
     
     #body #detail, #detail_fa{
-        padding:3% 5%;
+        padding:3% 3%;
         word-wrap: break-word;
         width:100%;
         box-sizing: border-box;
