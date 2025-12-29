@@ -27,6 +27,12 @@ html {
 }
 
 @media print {
+    #left_side{
+        position: fixed;
+        top:0;
+        right:0;
+        height:2000px;
+    }
     @page {
         size: 297mm 420mm;
         margin: 10px;
@@ -44,11 +50,7 @@ html {
     }
 }
 
-
-* {
-    margin:0;
-    padding:0;
-    font-family:'Calibri';
+:root {
     --title-color: #7c2525;
     --title-color-fade: #a47a7a;
     --background2-color: #000000;
@@ -79,6 +81,13 @@ html {
     --left-menu-size: 30%;
     --left-menu-min-size: 120px;
     --left-menu-max-size: 300px;
+}
+
+* {
+    margin:0;
+    padding:0;
+    font-family:'Calibri';
+    
 
     font-size: var(--font-size);
 
@@ -201,6 +210,19 @@ header {
         min-height: 300px;
     }
 
+    .info_part1 {
+        display:flex;
+        flex-direction: row-reverse;
+    }
+
+    header #image-print{
+        border-radius: 30px;
+        width:150px;
+        height: 150px;
+        margin:auto;
+        margin-left:20px;
+    }
+
     header img{
         width:100%;
         object-fit: cover;
@@ -307,8 +329,8 @@ header {
 
     
     #body #title{
-        padding:0 5%;
-        padding-top:40px;
+        padding:0 1%;
+        padding-top:10px;
         padding-bottom:20px;
     }
     
@@ -332,7 +354,7 @@ header {
     }
     
     #body #detail, #detail_fa{
-        padding:3% 10%;
+        padding:3% 5%;
         word-wrap: break-word;
         width:100%;
         box-sizing: border-box;

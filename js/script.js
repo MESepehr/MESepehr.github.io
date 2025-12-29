@@ -115,7 +115,7 @@ function makeItPrintFriendly(){
     var allLinks = document.querySelectorAll('#web_page, #web_page_fa, #social_web_page');
     for(var i = 0 ; i < allLinks.length ; i++)
     {
-        allLinks[i].style.fontSize = 'var(--font-size)';
+        // allLinks[i].style.fontSize = 'var(--font-size-small)';
         // allLinks[i].style.textDecoration = 'underline';
     }
 
@@ -124,6 +124,9 @@ function makeItPrintFriendly(){
     {
         onlyOnPrints[i].style.display = 'block';
     }
+
+    // document.documentElement.style.setProperty('--left-menu-size', '0px');
+    // document.getElementById('left_side').style.display = 'none';
 
     var notOnPrints = document.getElementsByClassName('not_on_print');
     for(var i = 0 ; i < notOnPrints.length ; i++)
