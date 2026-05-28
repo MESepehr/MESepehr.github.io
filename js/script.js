@@ -17,6 +17,7 @@ var agesIntervalId = 0 ;
 var forceFarsi = window.location.hash.toLowerCase().indexOf("fa") != -1;
 var forceEn = window.location.hash.toLowerCase().indexOf("en") != -1;
 var showHolderwinFirst = window.location.hash.toLowerCase().indexOf("holder") != -1;
+var hideContacts = window.location.hash.toLowerCase().indexOf("no_contact") != -1;
 
 const faZeroCharCode = String('۰').charCodeAt(0);
 var myFirstDayOfJon = new Date("Feb 26 2009 08:30:00");
@@ -62,6 +63,9 @@ function renderPage(){
     for(var i = 0 ; i < onlyOnPrints.length ; i++)
     {
         onlyOnPrints[i].style.display = 'none';
+    }
+    if(hideContacts){
+        hideItem(document.getElementsByClassName('no_contact'));
     }
 }
 
